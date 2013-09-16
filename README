@@ -1,3 +1,16 @@
-CREATE THE VIM IDE be applicable to Multi PROGRAMMING LANGUAGE
+#About
+CEATE THE VIM IDE be applicable to Multi PROGRAMMING LANGUAGE
 
-Current Targe: PHP, PYTHON, SCALA
+##Quick Start:
+1.Setup Vundle:
+    `$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
+
+2.Configure bundles
+
+3.Install configured bundles:
+    Launch vim, run `:BundleInstall` (or vim +BundleInstall +qall for CLI lovers)
+
+##TODO:
+* PHP VIM IDE
+* PYTHON VIM IDE
+* SCALA VIM IDE
