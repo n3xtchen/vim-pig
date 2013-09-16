@@ -5,7 +5,26 @@ CEATE THE VIM IDE be applicable to Multi PROGRAMMING LANGUAGE
 1.Setup Vundle:
     `$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
 
-2.Configure bundles
+2.Download confiured file
+    `$ git clone https://github.com/n3xtchen/vim-pig.git ~/.vim/vim-pig/``
+
+3.Configure .vimrc
+    `$ cp ~/.vim/vim-pig/vimrc ~/.vimrc`
+
+4.Load the Configure you need with your programming
+    >" choose IDE U need
+    >" PHP IDE
+    >if filereadable("~/.vim/vim-pig/php-vimrc")
+    >    source ~/.vim/vim-pig/php-vimrc
+    >endif
+    >" Python IDE
+    >if filereadable("~/.vim/vim-pig/python-vimrc")
+    >    source ~/.vim/vim-pig/python-vimrc
+    >endif
+    >" Scala IDE
+    >if filereadable("~/.vim/vim-pig/scala-vimrc")
+    >    source ~/.vim/vim-pig/php-vimrc
+    >endif
 
 3.Install configured bundles:
     Launch vim, run `:BundleInstall` (or vim +BundleInstall +qall for CLI lovers)

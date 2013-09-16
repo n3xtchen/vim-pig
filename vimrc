@@ -38,6 +38,7 @@ set smartcase
 " 锁进格式
 set tabstop=4
 set shiftwidth=4
+
 "根据文件类型设置缩进格式
 au FileType html,javascript setl shiftwidth=2
 au FileType html,javascript setl tabstop=2
@@ -65,23 +66,9 @@ call vundle#rc()
 " required!
 Bundle 'gmarik/vundle'
 
-" My Bundles here:
-"
-" Bundle 'derekwyatt/vim-scala'
-" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Bundle 'tpope/vim-rails.git'
-" Bundle 'L9'
-" Bundle 'FuzzyFinder'
-" Bundle 'git://git.wincent.com/command-t.git'
-" Bundle 'https://github.com/vim-scripts/perl-support.vim.git'
-" Bundle 'https://github.com/altercation/vim-colors-solarized.git'
-" Bundle 'https://github.com/jpo/vim-railscasts-theme.git'
-" Bundle 'TaskList.vim'
-
 " N3xt Bundles
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
-Bundle 'desert-warm-256'
 Bundle 'plasticboy/vim-markdown'
 " vimrc 管理工具
 Bundle 'Sauce'
@@ -97,33 +84,10 @@ Bundle 'fugitive.vim'
 Bundle 'https://github.com/Raimondi/delimitMate.git'
 " 文件树
 Bundle 'The-NERD-tree'
+
 " 程序解析边栏
 Bundle 'Tagbar'
 Bundle 'taglist.vim'
-" 自动补齐
-Bundle 'https://github.com/vim-scripts/cscope.vim'
-" python
-Bundle 'python.vim'
-Bundle 'python_fold'
-" pep8 语法检查
-Bundle 'nvie/vim-flake8'	
-" php
-Bundle 'php.vim'
-Bundle 'phpfolding.vim'
-Bundle 'phpqa'
-
-" phpunit 插件
-Bundle 'joonty/vim-phpunitqf.git'
-" JS 插件
-
-" 需要 python 支持
-if has("python")
-    " python 自动补齐
-    " Bundle 'davidhalter/jedi-vim'	
-    " 状态栏
-    Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}	
-endif"
-
 " tagbar required
 if has("ctag")
     if filereadable("tags")
@@ -132,6 +96,9 @@ if has("ctag")
 endif
 
 nmap <F8> :TagbarToggle<CR>
+
+" 自动补齐
+Bundle 'https://github.com/vim-scripts/cscope.vim'
 
 " cscope required
 if has("cscope")
@@ -145,46 +112,11 @@ if has("cscope")
     set csverb
 endif
 
-" flake8
-let g:flake8_ignore="E501,W293"
-autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
-
-" php
-" phpunit
-"仅检测PHP语法
-autocmd FileType php map <silent> <F9> :!php -l %<cr>
-" phpunit 命令存放位置
-let g:phpunit_cmd = "phpunit"
-let g:phpunit_args = "-c phpunit.xml"
-" 输出临时目录
-let g:phpunit_tmpfile = "/tmp/vim_phpunit.out"
-
-" Set the codesniffer args
-let g:phpqa_codesniffer_args = "--standard=Zend"
-" PHP executable (default = \"php\")
-" let g:phpqa_php_cmd='/path/to/php'
-"
-" PHP Code Sniffer binary (default = \"phpcs\")
-" let g:phpqa_codesniffer_cmd='/path/to/phpcs'
-"
-" PHP Mess Detector binary (default = \"phpmd\")
-" let g:phpqa_messdetector_cmd='/path/to/phpmd'")
- 
-" Don't run messdetector on save (default = 1)
-let g:phpqa_messdetector_autorun = 0
-
-" Don't run codesniffer on save (default = 1)
-let g:phpqa_codesniffer_autorun = 0
-
-" Show code coverage on load (default = 0)
-let g:phpqa_codecoverage_autorun = 1
- 
-" Stop the location list opening automatically
-let g:phpqa_open_loc = 0
-" Clover code coverage XML file
-" let g:phpqa_codecoverage_file = \"/path/to/clover.xml\"
-" " Show markers for lines that ARE covered by tests (default = 1)
-let g:phpqa_codecoverage_showcovered = 0
+" 需要 python 支持
+if has("python")
+    " 状态栏
+    Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}	
+endif"
 
 " powerline required
 let g:Powerline_colorscheme = 'tux'
@@ -193,11 +125,6 @@ let g:Powerline_symbols = 'fancy'
 set fillchars+=stl:\ ,stlnc:\ 
 set laststatus=2	" Always show statusline
 set t_Co=256	" Use 256 colours
-
-" Source a global configuration file if available
-if filereadable("vimrc")
-	source ./vimrc
-endif
 
 "
 " Brief help
