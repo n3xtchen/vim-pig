@@ -1,0 +1,15 @@
+" python
+Bundle 'python.vim'
+Bundle 'python_fold'
+" pep8 语法检查
+Bundle 'nvie/vim-flake8'	
+
+
+
+" python 自动补齐
+" Bundle 'davidhalter/jedi-vim'	
+
+" flake8
+let g:flake8_ignore="E501,W293"
+autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
+

@@ -1,0 +1,46 @@
+" php
+Bundle 'php.vim'
+Bundle 'phpfolding.vim'
+Bundle 'phpqa'
+" phpunit 插件
+Bundle 'joonty/vim-phpunitqf.git'
+
+" php
+" phpunit
+"仅检测PHP语法
+autocmd FileType php map <silent> <F9> :!php -l %<cr>
+" phpunit 命令存放位置
+let g:phpunit_cmd = "phpunit"
+let g:phpunit_args = "-c phpunit.xml"
+" 输出临时目录
+let g:phpunit_tmpfile = "/tmp/vim_phpunit.out"
+
+" Set the codesniffer args
+let g:phpqa_codesniffer_args = "--standard=Zend"
+" PHP executable (default = \"php\")
+" let g:phpqa_php_cmd='/path/to/php'
+"
+" PHP Code Sniffer binary (default = \"phpcs\")
+" let g:phpqa_codesniffer_cmd='/path/to/phpcs'
+"
+" PHP Mess Detector binary (default = \"phpmd\")
+" let g:phpqa_messdetector_cmd='/path/to/phpmd'")
+ 
+" Don't run messdetector on save (default = 1)
+let g:phpqa_messdetector_autorun = 0
+
+" Don't run codesniffer on save (default = 1)
+let g:phpqa_codesniffer_autorun = 0
+
+" Show code coverage on load (default = 0)
+let g:phpqa_codecoverage_autorun = 1
+ 
+" Stop the location list opening automatically
+let g:phpqa_open_loc = 0
+" Clover code coverage XML file
+" let g:phpqa_codecoverage_file = \"/path/to/clover.xml\"
+" " Show markers for lines that ARE covered by tests (default = 1)
+let g:phpqa_codecoverage_showcovered = 0
+
+
+
