@@ -1,6 +1,6 @@
 " php
 Bundle 'php.vim'
-Bundle 'phpfolding.vim'
+" Bundle 'phpfolding.vim'
 Bundle 'phpqa'
 " phpunit 插件
 Bundle 'joonty/vim-phpunitqf.git'
@@ -41,6 +41,3 @@ let g:phpqa_open_loc = 0
 " let g:phpqa_codecoverage_file = \"/path/to/clover.xml\"
 " " Show markers for lines that ARE covered by tests (default = 1)
 let g:phpqa_codecoverage_showcovered = 0
-
-
-

@@ -1,0 +1,49 @@
+" 格式化高亮
+syntax enable
+
+" 使用C缩进
+set cindent
+
+" 在缩进和遇到 Tab 键时使用空格替代
+set expandtab
+
+" required!
+" 打开插件
+filetype plugin indent on     
+
+" 根据文件类型设置缩进格式
+au FileType html,javascript setl shiftwidth=2
+au FileType html,javascript setl tabstop=2
+au FileType scala,java,python,php,vim setl shiftwidth=4
+au FileType scala,java,python,php,vim setl tabstop=4
+
+" 成对符号补齐
+Bundle 'https://github.com/Raimondi/delimitMate.git'
+
+" 自动补齐
+if has("ctag")
+    if filereadable("tags")
+        set tags=tags
+        Bundle 'taglist.vim'
+    endif
+endif
+
+if has("cscope")
+    set csprg=/usr/bin/cscope
+    set csto=1
+    set cst
+    set nocsverb
+    if filereadable("cscope.out")
+        cs add cscope.out
+        Bundle 'https://github.com/vim-scripts/cscope.vim'
+    endif
+    set csverb
+endif
+
+" 程序解析边栏
+Bundle 'Tagbar'
+nmap <F8> :TagbarToggle<CR>
+
+
+
+

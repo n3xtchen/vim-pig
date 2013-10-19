@@ -1,20 +1,21 @@
 " 基础配置
-set nocompatible " be iMproved
-
+set nocompatible 
+" be iMproved
+ 
 " Vim 的内部编码
 set encoding=utf-8         
+
+" 设置会退键
+set backspace=indent,eol,start
 
 " Vim 在与屏幕/键盘交互时使用的编码(取决于实际的终端的设定)
 set termencoding=utf-8  
 
-" Vim 当前编辑的文件在存储时的编码
-set fileencoding=utf-8     
-
 " Vim 打开文件时的尝试使用的编码
 set fileencodings=ucs-bom,utf-8,gbk,default,latin1 
 
-" 格式化高亮
-syntax enable
+" Vim 当前编辑的文件在存储时的编码
+set fileencoding=utf-8     
 
 " 显示行号
 set nu
@@ -22,41 +23,22 @@ set nu
 " 括号匹配
 set showmatch
 
-" 在缩进和遇到 Tab 键时使用空格替代
-set expandtab
-
-set cindent
-
 " 自动对齐
 set autoindent
 
 " 根据上面的对齐格式
+set smartcase
 set smartindent
 
-set smartcase
-
-" 锁进格式
+" 缩进格式
 set tabstop=4
 set shiftwidth=4
-
-"根据文件类型设置缩进格式
-au FileType html,javascript setl shiftwidth=2
-au FileType html,javascript setl tabstop=2
-au FileType java,python,php,vim setl shiftwidth=4
-au FileType java,python,php,vim setl tabstop=4
 
 " 文件格式为unix
 set fileformat=unix
 
 " 配色方案
 colorscheme desert
-
-" required!
-filetype off 
-
-" required!
-" 自动化检查文件类型
-filetype plugin indent on     
 
 " required!
 set rtp+=~/.vim/bundle/vundle/
@@ -70,61 +52,46 @@ Bundle 'gmarik/vundle'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'plasticboy/vim-markdown'
+
 " vimrc 管理工具
 Bundle 'Sauce'
 " 多种语言语法检查
 " Bundle 'Syntastic'
+"
 " 快速定位
 Bundle 'Lokaltog/vim-easymotion'
+
+" 文件树
+Bundle 'The-NERD-tree'
+
 " 版本控制
 Bundle 'vcscommand.vim'
 " git
 Bundle 'fugitive.vim'
-" 成对符号补齐
-Bundle 'https://github.com/Raimondi/delimitMate.git'
-" 文件树
-Bundle 'The-NERD-tree'
 
-" 程序解析边栏
-Bundle 'Tagbar'
-Bundle 'taglist.vim'
-" tagbar required
-if has("ctag")
-    if filereadable("tags")
-        set tags=tags
-    endif
+" 编程通用插件和配置
+if filereadable($HOME."/.vim/vim-pig/common-program-vimrc")
+    source ~/.vim/vim-pig/common-program-vimrc
 endif
 
-nmap <F8> :TagbarToggle<CR>
-
-" 自动补齐
-Bundle 'https://github.com/vim-scripts/cscope.vim'
-
-" cscope required
-if has("cscope")
-    set csprg=/usr/bin/cscope
-    set csto=1
-    set cst
-    set nocsverb
-    if filereadable("cscope.out")
-        cs add cscope.out
-    endif
-    set csverb
+" Powerline 定制状态栏
+if filereadable($HOME."/.vim/vim-pig/powerline-vimrc")
+    source ~/.vim/vim-pig/powerline-vimrc
 endif
 
-" 需要 python 支持
-if has("python")
-    " 状态栏
-    Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}	
-endif"
-
-" powerline required
-let g:Powerline_colorscheme = 'tux'
-let g:Powerline_symbols = 'fancy'
-" set guifont=PowerlineSymbols\ for\ Powerline
-set fillchars+=stl:\ ,stlnc:\ 
-set laststatus=2	" Always show statusline
-set t_Co=256	" Use 256 colours
+" choose IDE U need
+" PHP IDE
+if filereadable($HOME."/.vim/vim-pig/php-vimrc")
+    source ~/.vim/vim-pig/php-vimrc
+endif
+" Python IDE
+if filereadable($HOME."/.vim/vim-pig/python-vimrc")
+    source ~/.vim/vim-pig/python-vimrc
+endif
+" Scala IDE
+if filereadable($HOME."/.vim/vim-pig/scala-vimrc")
+    source ~/.vim/vim-pig/scala-vimrc
+endif
 
 "
 " Brief help

@@ -1,1 +1,3 @@
-" Bundle 'derekwyatt/vim-scala'
+Bundle 'derekwyatt/vim-scala'
+au FileType scala set syntax=scala
+set syntax=scala
