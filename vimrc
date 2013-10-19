@@ -44,9 +44,13 @@ colorscheme desert
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+execute pathogen#infect()
+
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
+Bundle 'pathogen.vim'
+
 
 " N3xt Bundles
 Bundle 'mattn/webapi-vim'
