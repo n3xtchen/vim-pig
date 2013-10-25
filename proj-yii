@@ -1,0 +1,24 @@
+autocmd VimEnter * NERDTree
+
+if has("cscope")
+    if filereadable("./tags/cscope.out")
+        cs add ./tags/cscope.out
+    endif
+endif
+
+let g:phpunit_args = "-c protected/tests/phpunit.xml"
+
+" Let PHPUnitQf use the callback function
+let g:phpunit_callback = "YiiTestCallback"
+
+function! YiiTestCallback(args)
+    " Trim white space
+    let l:args = substitute(a:args, '^\s*\(.\{-}\)\s*$', '\1', '')
+
+    " If no arguments are passed to :Test
+    if len(l:args) is 0
+        let l:args = expand('%')
+    endif
+
+    return l:args
+endfunction

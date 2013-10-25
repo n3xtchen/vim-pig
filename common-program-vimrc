@@ -11,9 +11,6 @@ set expandtab
 " 打开插件
 filetype plugin indent on     
 
-" for SQL
-" Bundle 'dbext.vim'
-
 " 根据文件类型设置缩进格式
 au FileType html,javascript setl shiftwidth=2
 au FileType html,javascript setl tabstop=2

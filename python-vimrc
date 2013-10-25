@@ -1,5 +1,5 @@
 " python
-Bundle 'Pydiction'
+" Bundle 'Pydiction'
 Bundle 'python.vim'
 " Bundle 'python_fold'
 " pep8 语法检查
