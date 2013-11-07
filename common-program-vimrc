@@ -17,6 +17,9 @@ au FileType html,javascript setl tabstop=2
 au FileType scala,java,python,php,vim setl shiftwidth=4
 au FileType scala,java,python,php,vim setl tabstop=4
 
+" 版本控制
+Bundle 'vcscommand'
+
 " 成对符号补齐
 Bundle 'https://github.com/Raimondi/delimitMate.git'
 
