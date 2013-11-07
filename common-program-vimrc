@@ -11,9 +11,6 @@ set expandtab
 " 打开插件
 filetype plugin indent on     
 
-" for SQL
-" Bundle 'dbext.vim'
-
 " 根据文件类型设置缩进格式
 au FileType html,javascript setl shiftwidth=2
 au FileType html,javascript setl tabstop=2
@@ -22,6 +19,10 @@ au FileType scala,java,python,php,vim setl tabstop=4
 
 " 成对符号补齐
 Bundle 'https://github.com/Raimondi/delimitMate.git'
+
+" 程序解析边栏
+Bundle 'Tagbar'
+nmap <F8> :TagbarToggle<CR>
 
 " 自动补齐
 if has("ctag")
@@ -43,6 +44,11 @@ if has("cscope")
     set csverb
 endif
 
-" 程序解析边栏
-Bundle 'Tagbar'
-nmap <F8> :TagbarToggle<CR>
+" 模版
+Bundle 'aperezdc/vim-template'
+let g:templates_no_autocmd = 1
+
+" :Template foo
+
+" for SQL
+Bundle 'dbext.vim'

@@ -9,6 +9,8 @@ Bundle 'joonty/vim-phpunitqf.git'
 " phpunit
 "仅检测PHP语法
 autocmd FileType php map <silent> <F9> :!php -l %<cr>
+
+autocmd FileType php map <silent> <F10> :Test %<cr>
 " phpunit 命令存放位置
 let g:phpunit_cmd = "phpunit"
 let g:phpunit_args = "-c phpunit.xml"

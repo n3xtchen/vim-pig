@@ -1,11 +1,11 @@
 " python
-Bundle 'Pydiction'
+" Bundle 'Pydiction'
 Bundle 'python.vim'
 " Bundle 'python_fold'
 " pep8 语法检查
 Bundle 'nvie/vim-flake8'	
 
-let g:pydiction_location = '~/.vim/bundle/Pydiction/complete-dict'
+"let g:pydiction_location = '~/.vim/bundle/Pydiction/complete-dict'
 
 
 " python 自动补齐
