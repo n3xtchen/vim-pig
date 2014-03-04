@@ -3,3 +3,9 @@ Bundle 'dbext.vim'
 
 " for Scala
 Bundle 'derekwyatt/vim-scala'
+
+" Hadoop Pig
+Bundle 'pig.vim'
+augroup filetypedetect
+    au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
+augroup END

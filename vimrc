@@ -141,12 +141,6 @@ endif
 
 " choose IDE U need
 
-" Hadoop Pig
-Bundle 'pig.vim'
-augroup filetypedetect
-    au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
-augroup END
-
 " PHP IDE
 if filereadable($HOME."/.vim/vim-pig/php-vimrc")
     source ~/.vim/vim-pig/php-vimrc
@@ -157,9 +151,9 @@ if filereadable($HOME."/.vim/vim-pig/python-vimrc")
     source ~/.vim/vim-pig/python-vimrc
 endif
 
-" Scala IDE
-if filereadable($HOME."/.vim/vim-pig/scala-vimrc")
-    source ~/.vim/vim-pig/scala-vimrc
+" Alternative
+if filereadable($HOME."/.vim/vim-pig/vimrc-alternative")
+    source ~/.vim/vim-pig/vimrc-alternative
 endif
 
 "
