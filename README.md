@@ -8,21 +8,20 @@
 
 1. 安装 Vundle：
 
-    `$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
+        $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 2. 下载配置文件：
 
-    `$ git clone https://github.com/n3xtchen/vim-pig.git ~/.vim/vim-pig/`
+        $ git clone https://github.com/n3xtchen/vim-pig.git ~/.vim/vim-pig/
 
 3. 配置 VIM（将会覆盖你的之前的配置）：
 
-    `$ cp ~/.vim/vim-pig/vimrc ~/.vimrc`
+        $ cp ~/.vim/vim-pig/vimrc ~/.vimrc`
 
 4. 选择你要支持的语言和组建：
 
         if filereadable($HOME."/.vim/vim-pig/php-vimrc")
             source ~/.vim/vim-pig/php-vimrc
-
         endif
 
         if filereadable($HOME."/.vim/vim-pig/python-vimrc")
