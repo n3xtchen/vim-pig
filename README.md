@@ -1,6 +1,6 @@
 ## 关于
 旨在将 **Vim** 打造成好用的IDE，(^^;;，不过和 Hadoop Pig 一点关系都没有)，
-准备支持 PHP 以及 Python 语言，以及继承其他语言的小插件。
+将支持 PHP 以及 Python 语言，以及继承其他语言的小插件。
 
 希望能为你带来便利，^_^。
 
@@ -16,7 +16,7 @@
 
 3. 配置 VIM（将会覆盖你的之前的配置）：
 
-        $ cp ~/.vim/vim-pig/vimrc ~/.vimrc`
+        $ cp ~/.vim/vim-pig/vimrc ~/.vimrc
 
 4. 选择你要支持的语言和组建：
 
