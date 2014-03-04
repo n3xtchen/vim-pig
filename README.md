@@ -6,7 +6,7 @@ CEATE THE VIM IDE be applicable to Multi PROGRAMMING LANGUAGE
     `$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
 
 2.Download confiured file
-    `$ git clone https://github.com/n3xtchen/vim-pig.git ~/.vim/vim-pig/``
+    `$ git clone https://github.com/n3xtchen/vim-pig.git ~/.vim/vim-pig/`
 
 3.Configure .vimrc
     `$ cp ~/.vim/vim-pig/vimrc ~/.vimrc`
