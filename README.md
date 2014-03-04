@@ -1,35 +1,43 @@
-#About
-CEATE THE VIM IDE be applicable to Multi PROGRAMMING LANGUAGE
+## 关于
+旨在将 **Vim** 打造成好用的IDE，(^^;;，不过和 Hadoop Pig 一点关系都没有)，
+准备支持 PHP 以及 Python 语言，以及继承其他语言的小插件。
 
-##Quick Start:
-1.Setup Vundle:
-    `$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
+希望能为你带来便利，^_^。
 
-2.Download confiured file
-    `$ git clone https://github.com/n3xtchen/vim-pig.git ~/.vim/vim-pig/`
+## 快速安装
 
-3.Configure .vimrc
-    `$ cp ~/.vim/vim-pig/vimrc ~/.vimrc`
+1. 安装 Vundle：
 
-4.Load the Configure you need with your programming
-    >" choose IDE U need
-    >" PHP IDE
-    >if filereadable($HOME."/.vim/vim-pig/php-vimrc")
-    >    source ~/.vim/vim-pig/php-vimrc
-    >endif
-    >" Python IDE
-    >if filereadable($HOME."/.vim/vim-pig/python-vimrc")
-    >    source ~/.vim/vim-pig/python-vimrc
-    >endif
-    >" Scala IDE
-    >if filereadable($HOME."/.vim/vim-pig/scala-vimrc")
-    >    source ~/.vim/vim-pig/php-vimrc
-    >endif
+    $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-3.Install configured bundles:
+2. 下载配置文件：
+
+    $ git clone https://github.com/n3xtchen/vim-pig.git ~/.vim/vim-pig/
+
+3. 配置 VIM（将会覆盖你的之前的配置）：
+
+    $ cp ~/.vim/vim-pig/vimrc ~/.vimrc
+
+4. 选择你要支持的语言和组建：
+
+    " choose IDE U need
+    " PHP IDE
+    if filereadable($HOME."/.vim/vim-pig/php-vimrc")
+        source ~/.vim/vim-pig/php-vimrc
+    endif
+    " Python IDE
+    if filereadable($HOME."/.vim/vim-pig/python-vimrc")
+        source ~/.vim/vim-pig/python-vimrc
+    endif
+    " Scala IDE
+    if filereadable($HOME."/.vim/vim-pig/scala-vimrc")
+        source ~/.vim/vim-pig/php-vimrc
+    endif
+
+5. 安装插件：
+
     Launch vim, run `:BundleInstall` (or vim +BundleInstall +qall for CLI lovers)
 
-##TODO:
-* PHP VIM IDE
-* PYTHON VIM IDE
-* SCALA VIM IDE
+## Vim 组建说明
+
+未完待续

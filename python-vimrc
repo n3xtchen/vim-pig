@@ -7,7 +7,6 @@ Bundle 'nvie/vim-flake8'
 
 "let g:pydiction_location = '~/.vim/bundle/Pydiction/complete-dict'
 
-
 " python 自动补齐
 " Bundle 'davidhalter/jedi-vim'	
 
