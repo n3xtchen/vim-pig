@@ -20,25 +20,22 @@
 
 4. 选择你要支持的语言和组建：
 
-    " choose IDE U need
-    " PHP IDE
-    if filereadable($HOME."/.vim/vim-pig/php-vimrc")
-        source ~/.vim/vim-pig/php-vimrc
-    endif
+        if filereadable($HOME."/.vim/vim-pig/php-vimrc")
+            source ~/.vim/vim-pig/php-vimrc
 
-    " Python IDE
-    if filereadable($HOME."/.vim/vim-pig/python-vimrc")
-        source ~/.vim/vim-pig/python-vimrc
-    endif
+        endif
 
-    " Scala IDE
-    if filereadable($HOME."/.vim/vim-pig/scala-vimrc")
-        source ~/.vim/vim-pig/php-vimrc
-    endif
+        if filereadable($HOME."/.vim/vim-pig/python-vimrc")
+            source ~/.vim/vim-pig/python-vimrc
+        endif
+
+        if filereadable($HOME."/.vim/vim-pig/scala-vimrc")
+            source ~/.vim/vim-pig/php-vimrc
+        endif
 
 5. 安装插件：
 
-    Launch vim, run `:BundleInstall` (or vim +BundleInstall +qall for CLI lovers)
+    代开 vim, 运行 `:BundleInstall` (or vim +BundleInstall +qall for CLI lovers)
 
 ## Vim 组建说明
 
