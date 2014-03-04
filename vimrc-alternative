@@ -1,0 +1,5 @@
+" for SQL
+Bundle 'dbext.vim'
+
+" for Scala
+Bundle 'derekwyatt/vim-scala'

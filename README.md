@@ -28,10 +28,6 @@
             source ~/.vim/vim-pig/python-vimrc
         endif
 
-        if filereadable($HOME."/.vim/vim-pig/scala-vimrc")
-            source ~/.vim/vim-pig/php-vimrc
-        endif
-
 5. 安装插件：
 
     代开 vim, 运行 `:BundleInstall` (or vim +BundleInstall +qall for CLI lovers)

@@ -98,9 +98,21 @@ Bundle 'aperezdc/vim-template'
 let g:templates_no_autocmd = 1
 let g:email = 'echenwen@gmail.com'
 let g:user = 'n3xtchen'
-
-
 " :Template foo
+ 
+" 需要 python 支持
+if has("python")
+    " 状态栏
+    Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}	
+
+    " powerline required
+    let g:Powerline_colorscheme = 'tux'
+    let g:Powerline_symbols = 'fancy'
+    " set guifont=PowerlineSymbols\ for\ Powerline
+    set fillchars+=stl:\ ,stlnc:\ 
+    set laststatus=2	" Always show statusline
+    set t_Co=256	" Use 256 colours
+endif"
 
 " 自动补齐
 if has("ctag")
