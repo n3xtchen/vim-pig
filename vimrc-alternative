@@ -4,6 +4,9 @@ Bundle 'dbext.vim'
 " for Scala
 Bundle 'derekwyatt/vim-scala'
 
+" for R
+Bundle 'Vim-R-plugin'
+
 " Hadoop Pig
 Bundle 'pig.vim'
 augroup filetypedetect
